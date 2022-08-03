@@ -36,3 +36,12 @@
     transform: rotate(360deg);
   }
 }
+.companyCard {
+  display:flex;
+
+}
+.companyCard img {
+  width:100px;
+  height: auto;
+
+}
