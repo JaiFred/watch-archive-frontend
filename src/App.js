@@ -8,11 +8,12 @@ import {
 } from "react-router-dom";
 import './App.css';
 
+import Header from './Header';
 import Home from "./Home.js";
 import Collections from "./Collections.js"
 import Watches from "./Watches.js"
 
-function getCompany(){
+function getCompany() {
   fetch("http://localhost:9292/company")
   .then((r) => r.json())
   .then((data) => console.log(data));
@@ -22,24 +23,31 @@ function getWatches(){
   .then((r) => r.json())
   .then((data) => console.log(data));
 }
-function getCollection(){
+function getCollections(){
   fetch("http://localhost:9292/collection")
   .then((r) => r.json())
   .then((data) => console.log(data));
 }
+
+//
 function App() {
   return (
     <div className="App">
       <button onClick={getCompany}>Company</button>
       <button onClick={getWatches}>Watches</button>
-      <button onClick={getCollection}>Collection</button>
-    
-    <Routes>
-      <Route path="Home"></Route>
-      <Route path="Collections"></Route>
-      <Route path="Watches"></Route>
-    </Routes>
-</div>
+      <button onClick={getCollections}>Collection</button>
+
+{/* Routes for fetch webpages attachments */}
+    <BrowserRouter>
+      <Header/>
+      <Routes>
+        {/* Home => Company page */}
+        <Route exact path="/Home" element = {<Home/>}></Route>
+        <Route exact path="/Collections" element = {<Collections/>}></Route>
+        <Route exact path="/Watches" element = {<Watches/>}></Route>
+      </Routes>
+    </BrowserRouter>
+    </div>
    
   );
 }
