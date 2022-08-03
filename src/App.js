@@ -31,6 +31,8 @@ function getCollections(){
 
 //
 function App() {
+  const [companies, setCompanies] = useState([]);
+
   return (
     <div className="App">
       <button onClick={getCompany}>Company</button>
