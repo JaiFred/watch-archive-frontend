@@ -44,8 +44,12 @@ function App() {
       <Header/>
       <Routes>
         {/* Home => Company page */}
-        <Route exact path="/Home" element = {<Home/>}></Route>
+        <Route exact path="/" element = {<Home/>}></Route>
+        {/* Home => Company page */}
+
+        {/* Collections page  */}
         <Route exact path="/Collections" element = {<Collections/>}></Route>
+
         <Route exact path="/Watches" element = {<Watches/>}></Route>
       </Routes>
     </BrowserRouter>
