@@ -10,7 +10,7 @@ import './App.css';
 
 import Header from './Header';
 import Home from "./Home.js";
-import Collections from "./Collections.js"
+import Collection from "./Collection.js"
 import Watches from "./Watches.js"
 
 function getCompany() {
@@ -32,7 +32,18 @@ function getCollections(){
 //
 function App() {
   const [companies, setCompanies] = useState([]);
-
+// Show featured company
+// Featured Company
+// function handler(companyToFeature){
+//  setter = true
+//  thingBeingSet 
+//}
+//
+//
+// We're passing this^ through props down to the card
+// In the button(on click) call handler with name of the company
+//
+//
   return (
     <div className="App">
       <button onClick={getCompany}>Company</button>
@@ -48,9 +59,9 @@ function App() {
         {/* Home => Company page */}
 
         {/* Collections page  */}
-        <Route exact path="/Collections" element = {<Collections/>}></Route>
-
-        <Route exact path="/Watches" element = {<Watches/>}></Route>
+        <Route exact path="/collections" element = {<Collection/>}></Route>
+        {/* <Route path="/companies/:id" element={</>}/> */}
+        <Route exact path="/watches" element = {<Watches/>}></Route>
       </Routes>
     </BrowserRouter>
     </div>

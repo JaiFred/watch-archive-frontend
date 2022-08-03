@@ -38,10 +38,25 @@
 }
 .companyCard {
   display:flex;
-
+  width:300px;
+  height:400px;
+  border:black 2px solid;
+  margin:2%;
+  float:left;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-content: center;
 }
 .companyCard img {
-  width:100px;
-  height: auto;
-
+  
+  height: 100%;
+  
+}
+.companyCard h1{
+  color:rgb(0, 0, 0);
+  
+  text-align: center;
+}
+.companyCard div {
+  height:80px;
 }
