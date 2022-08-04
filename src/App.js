@@ -13,27 +13,31 @@ import Home from "./Home.js";
 import CollectionPage from "./CollectionPage.js"
 import WatchesPage from "./WatchesPage.js"
 
-function getCompany() {
-  fetch("http://localhost:9292/companies")
-  .then((r) => r.json())
-  .then((data) => console.log(data));
-}
-  
-  function getWatches(){
-  fetch("http://localhost:9292/watches")
-  .then((r) => r.json())
-  .then((data) => console.log(data));
-  }
 
-  function getCollections(){
-  fetch("http://localhost:9292/collections")
-  .then((r) => r.json())
-  .then((data) => console.log(data));
-  }
 
 //
   function App() {
+
   const [companies, setCompanies] = useState([]);
+
+
+  function getCompany() {
+    fetch("http://localhost:9292/companies")
+    .then((r) => r.json())
+    .then((data) => console.log(data));
+  }
+    
+    function getWatches(){
+    fetch("http://localhost:9292/watches")
+    .then((r) => r.json())
+    .then((data) => console.log(data));
+    }
+  
+    function getCollections(){
+    fetch("http://localhost:9292/collections")
+    .then((r) => r.json())
+    .then((data) => console.log(data));
+    }
 
 // Show featured company
 // Featured Company

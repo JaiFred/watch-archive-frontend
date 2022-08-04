@@ -1,32 +1,29 @@
 import {useState, useEffect} from "react";
-
-import CollectionContainer from "./CollectionContainer.js"
 import { useLocation } from "react-router-dom";
 
+import CollectionContainer from "./CollectionContainer.js"
 
-
-function CollectionPage(props){
-    console.log(props.location.state)
+function CollectionPage(){
     const [collections, setCollections] = useState([])
-
-    // const { id, name, company_id } = getCompanyCollections;
-
     
-
-    // const { id } = collection
+    // const { id, name, country, founded, image_url } = company
 
     // const location = useLocation()
-    // const {from} = location.state
-    // console.log(from)
+
+    // const id = location.state?.id
+
+    // console.log(id)
 
 
-    // const {}
 
     useEffect(() => {
         fetch(`http://localhost:9292/collections`)
-        .then((r) => r.json())
+
+        .then((r) => r.json()) 
         .then((data) => setCollections(data));
+        
     }, [])
+
     return(
         <div>
             <CollectionContainer collections={collections}/>
