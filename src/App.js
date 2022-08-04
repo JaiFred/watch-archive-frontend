@@ -32,6 +32,7 @@ function getCollections(){
 //
 function App() {
   const [companies, setCompanies] = useState([]);
+
 // Show featured company
 // Featured Company
 // function handler(companyToFeature){
@@ -44,6 +45,9 @@ function App() {
 // In the button(on click) call handler with name of the company
 //
 //
+
+
+
   return (
     <div className="App">
       <button onClick={getCompany}>Company</button>
