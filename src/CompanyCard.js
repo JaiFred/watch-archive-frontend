@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { useState ,useEffect} from 'react'
+
 function CompanyCard({company}){
     const { id, name, country, founded, image_url } = company
 
@@ -13,7 +14,7 @@ function CompanyCard({company}){
         <div className="companyCard">
             
             <button>
-                <Link company={company} to="/Collections">
+                <Link company={company} to={{pathname:"/collections", state:"id"}}>
                     <div>
                         <img src={image_url} alt="brand logo" onClick={handleClick}></img>
                     </div>

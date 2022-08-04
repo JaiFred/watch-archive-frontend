@@ -18,6 +18,7 @@ function getCompany() {
   .then((r) => r.json())
   .then((data) => console.log(data));
 }
+  
   function getWatches(){
   fetch("http://localhost:9292/watches")
   .then((r) => r.json())
