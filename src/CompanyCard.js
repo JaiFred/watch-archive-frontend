@@ -11,11 +11,13 @@ function CompanyCard({company}){
 
     return(
         <div className="companyCard">
-            <div><img src={image_url} alt="brand logo" onClick={handleClick}></img></div>
             
-            <h1>{name}</h1>
             <button>
-            <Link company={company} to="/Collections">Go to Collection</Link>
+                <Link company={company} to="/Collections">
+                    <div>
+                        <img src={image_url} alt="brand logo" onClick={handleClick}></img>
+                    </div>
+                </Link>
             </button>
         </div>
     )

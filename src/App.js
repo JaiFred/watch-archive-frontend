@@ -10,27 +10,28 @@ import './App.css';
 
 import Header from './Header';
 import Home from "./Home.js";
-import Collection from "./Collection.js"
-import Watches from "./Watches.js"
+import CollectionPage from "./CollectionPage.js"
+import WatchesPage from "./WatchesPage.js"
 
 function getCompany() {
-  fetch("http://localhost:9292/company")
+  fetch("http://localhost:9292/companies")
   .then((r) => r.json())
   .then((data) => console.log(data));
 }
-function getWatches(){
+  function getWatches(){
   fetch("http://localhost:9292/watches")
   .then((r) => r.json())
   .then((data) => console.log(data));
-}
-function getCollections(){
-  fetch("http://localhost:9292/collection")
+  }
+
+  function getCollections(){
+  fetch("http://localhost:9292/collections")
   .then((r) => r.json())
   .then((data) => console.log(data));
-}
+  }
 
 //
-function App() {
+  function App() {
   const [companies, setCompanies] = useState([]);
 
 // Show featured company
@@ -45,7 +46,6 @@ function App() {
 // In the button(on click) call handler with name of the company
 //
 //
-
 
 
   return (
@@ -63,9 +63,10 @@ function App() {
         {/* Home => Company page */}
 
         {/* Collections page  */}
-        <Route exact path="/collections" element = {<Collection/>}></Route>
+        <Route exact path="/collections" element = {<CollectionPage/>}></Route>
+
         {/* <Route path="/companies/:id" element={</>}/> */}
-        <Route exact path="/watches" element = {<Watches/>}></Route>
+        <Route exact path="/watches" element = {<WatchesPage/>}></Route>
       </Routes>
     </BrowserRouter>
     </div>

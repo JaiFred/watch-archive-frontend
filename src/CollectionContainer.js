@@ -10,7 +10,7 @@ function CollectionContainer({collections}) {
     return( 
     <div>
         <h1>Collection</h1>
-            {CollectionCard}
+            {collectionCardList}
     </div>
     )
 }

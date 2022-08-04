@@ -1,10 +1,14 @@
 import {useState, useEffect} from "react";
-import CollectionCard from "./CollectionCard.js"
+
 import CollectionContainer from "./CollectionContainer.js"
-function Collection(){
+
+
+function CollectionPage(){
     const [collections, setCollections] = useState([])
+    // const {}
+
     useEffect(() => {
-        fetch("http://localhost:9292/collection")
+        fetch(`http://localhost:9292/collections`)
         .then((r) => r.json())
         .then((data) => setCollections(data));
     }, [])
@@ -14,4 +18,4 @@ function Collection(){
         </div>
     )
 }
-export default Collection
+export default CollectionPage

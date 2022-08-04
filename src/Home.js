@@ -5,12 +5,12 @@ import CompanyContainer from "./CompanyContainer.js"
 function Home(){
     const [companies, setCompanies] = useState([])
     useEffect(() => {
-        fetch("http://localhost:9292/company")
+        fetch("http://localhost:9292/companies")
         .then((r) => r.json())
         .then((data) => setCompanies(data));
+
     }, [])
     
-   
     return( 
        <div>
         <h1>Companies</h1>
