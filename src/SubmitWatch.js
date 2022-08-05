@@ -50,7 +50,7 @@ function SubmitWatch({ handleAddWatch }){
                 <div>
                     <label>
                         <input type="text" 
-                            className="textInput" 
+                            className="imageInput" 
                             id="image" 
                             placeholder='image' 
                             onChange={(e) => setImage(e.target.value)}/>
@@ -59,9 +59,19 @@ function SubmitWatch({ handleAddWatch }){
                 <div>
                     <label>
                         <input
-                            className="textInput"
+                            className="nameInput"
                             id="name"
                             placeholder='name'
+                            onChange={(e) => setName(e.target.value)}
+                        />
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        <input 
+                            className="manufacturer"
+                            id="manufacturer"
+                            placeholder='manufacturer'
                             onChange={(e) => setName(e.target.value)}
                         />
                     </label>
