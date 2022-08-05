@@ -1,11 +1,11 @@
 import {useState, useEffect} from "react";
-import { useLocation } from "react-router-dom";
 
+import {Link, Routes, Route, useNavigate} from 'react-router-dom';
 import CollectionContainer from "./CollectionContainer.js"
 
 function CollectionPage(){
     const [collections, setCollections] = useState([])
-
+    const navigate = useNavigate();
     // const { id, name, company_id } = collections
 
     // console.log(name)
@@ -31,6 +31,7 @@ function CollectionPage(){
 
     return(
         <div>
+            <button onClick={() => navigate(-1)}>Go back 1 Page</button>
             <CollectionContainer collections={collections}/>
         </div>
     )
