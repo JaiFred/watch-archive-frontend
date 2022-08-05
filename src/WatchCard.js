@@ -22,8 +22,11 @@ function WatchCard({ watch, handleDeleteWatch }) {
 //     end
 
     return(
-    <div>
+    <div className="watchCard">
         <img src={image_url}></img>
+        <h1>{name}</h1>
+        <p><strong>Made by: </strong>{manufacturer}</p>
+        <p><strong>Made with: </strong>{materials}</p>
         <button className="delete_button" onClick={handleDeleteClick}>Delete Post</button>
     </div>
     )

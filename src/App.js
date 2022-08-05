@@ -80,9 +80,9 @@ import SubmitWatch from './SubmitWatch';
 
   return (
     <div className="App">
-      <button onClick={getCompany}>Company</button>
+      {/* <button onClick={getCompany}>Company</button>
       <button onClick={getWatches}>Watches</button>
-      <button onClick={getCollections}>Collection</button>
+      <button onClick={getCollections}>Collection</button> */}
 
 {/* Routes for fetch webpages attachments */}
     <BrowserRouter>

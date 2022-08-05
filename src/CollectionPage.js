@@ -1,11 +1,12 @@
 import {useState, useEffect} from "react";
-import { useLocation } from "react-router-dom";
 
+import {Link, Routes, Route, useNavigate} from 'react-router-dom';
 import CollectionContainer from "./CollectionContainer.js"
+
 
 function CollectionPage(){
     const [collections, setCollections] = useState([])
-
+    const navigate = useNavigate();
     // const { id, name, company_id } = collections
 
     // console.log(name)
@@ -28,7 +29,6 @@ function CollectionPage(){
         .then((data) => setCollections(data));
         
     }, [])
-
 
     return(
         <div>
