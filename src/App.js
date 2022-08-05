@@ -51,6 +51,16 @@ import SubmitWatch from './SubmitWatch';
       setWatches(updatedWatchesArray);
     }
 
+    // function handleDeleteWatch(deletedID) {
+    //   // console.log(deletedID)
+    //   const updatedWatchesArray = watches.filter(
+    //     (watch) => watch.id !== deletedID
+        
+    //   );
+    //   setFoods(updatedWatchesArray);
+    // }
+  
+
 
     
 
@@ -85,7 +95,7 @@ import SubmitWatch from './SubmitWatch';
         <Route exact path="/collections" element = {<CollectionPage/>}></Route>
 
         {/* <Route path="/companies/:id" element={</>}/> */}
-        <Route exact path="/watches" element = {<WatchPage handleAddWatch={handleAddWatch}/>}></Route>
+        <Route exact path="/watches" element = {<WatchPage/>}></Route>
       </Routes>
     </BrowserRouter>
     </div>
@@ -94,3 +104,4 @@ import SubmitWatch from './SubmitWatch';
 }
 
 export default App;
+
