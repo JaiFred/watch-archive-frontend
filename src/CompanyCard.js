@@ -20,7 +20,7 @@ function CompanyCard({company, collections}){
         console.log(collections.company_id)
     }
 
-// this filters the company's collections
+// this filters shows company's collections
 
     return(
         <div className="companyCard">
