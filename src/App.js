@@ -11,7 +11,7 @@ import './App.css';
 import Header from './Header';
 import Home from "./Home.js";
 import CollectionPage from "./CollectionPage.js"
-import WatchPage from "./WatchPage"
+import WatchPage from "./WatchPage.js"
 
 
 

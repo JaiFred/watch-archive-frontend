@@ -1,27 +1,36 @@
-import { useState, useEffect } from "react"
 
-import WatchContainer from "react"
 
 function WatchPage(){
 
-    const [ watches, setWatches ] = useState([])
+    const [watches, setWatches] = useState([])
+
+    // const { id, name, company_id } = collections
+
+    // console.log(name)
+    
+    // const { id, name, country, founded, image_url } = company
+
+
+    // const location = useLocation()
+
+    // const id = location.state?.id
+
+    // console.log(id)
+
+
 
     useEffect(() => {
         fetch(`http://localhost:9292/watches`)
 
         .then((r) => r.json()) 
-        .then((data) => setWatches(data));
+        .then((data) => setCollections(data));
         
     }, [])
 
-
-    // const { collection } = collection
-
-    return (
+    return(
         <div>
-            <WatchContainer/>
+            <CollectionContainer collections={collections}/>
         </div>
     )
-}
 
-export default WatchPage;
+}
