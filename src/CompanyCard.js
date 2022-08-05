@@ -17,7 +17,7 @@ function CompanyCard({company, collections}){
 
         console.log("image clicked")
 
-        console.log(collections.company_id)
+        // console.log(collections.company_id)
     }
 
 // this filters shows company's collections

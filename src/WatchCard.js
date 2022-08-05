@@ -2,7 +2,7 @@
 
 function WatchCard({watch}) {
 
-    const { image_url, name, manufacturer, materials, year, company_id, collection_id } = watch
+    const {id, image_url, name, manufacturer, materials, year, company_id, collection_id } = watch
 
 //     create_table "watches", force: :cascade do |t|
 //     t.string "image_url"
@@ -15,11 +15,9 @@ function WatchCard({watch}) {
 //     end
 
     return (
-
     <div>
         <img src={image_url}></img>
     </div>
-
     )
 
 }

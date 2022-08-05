@@ -12,6 +12,7 @@ import Header from './Header';
 import Home from "./Home.js";
 import CollectionPage from "./CollectionPage.js"
 import WatchPage from "./WatchPage.js"
+import SubmitWatch from './SubmitWatch';
 
 
 
@@ -19,6 +20,7 @@ import WatchPage from "./WatchPage.js"
   function App() {
 
   const [companies, setCompanies] = useState([]);
+  const [watches, setWatches] = useState([])
 
 
   function getCompany() {
@@ -37,6 +39,16 @@ import WatchPage from "./WatchPage.js"
     fetch("http://localhost:9292/collections")
     .then((r) => r.json())
     .then((data) => console.log(data));
+    }
+
+    // function handleAddFood(newFood) {
+    //   const updatedFoodsArray = [...foods, newFood];
+    //   setFoods(updatedFoodsArray);
+    // }
+
+    function handleAddWatch(newWatch){
+      const updatedWatchesArray = [...watches, newWatch]
+      setWatches(updatedWatchesArray);
     }
 
 
@@ -67,14 +79,13 @@ import WatchPage from "./WatchPage.js"
       <Header/>
       <Routes>
         {/* Home => Company page */}
-        <Route exact path="/" element = {<Home/>}></Route>
+        <Route path="/" element = {[<SubmitWatch/>,<Home/>]}/>
         {/* Home => Company page */}
-
         {/* Collections page  */}
         <Route exact path="/collections" element = {<CollectionPage/>}></Route>
 
         {/* <Route path="/companies/:id" element={</>}/> */}
-        <Route exact path="/watches" element = {<WatchPage/>}></Route>
+        <Route exact path="/watches" element = {<WatchPage handleAddWatch={handleAddWatch}/>}></Route>
       </Routes>
     </BrowserRouter>
     </div>

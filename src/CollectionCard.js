@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 function CollectionCard({collection}) {
     const { id, name, company_id} = collection
 
-    console.log(company_id)
+    // console.log(company_id)
 
     // const newCollection = [...company_id]
 
