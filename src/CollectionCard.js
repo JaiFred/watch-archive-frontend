@@ -13,9 +13,8 @@ function CollectionCard({collection}) {
     // })
 
     return(
-<div>
-    <div className="collectionCard">
-    
+    <div>
+        <div className="collectionCard">
             <h1>{name}</h1>
             <button>
                 <Link collection={collection} to="/watches">Go to watches</Link>

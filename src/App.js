@@ -11,7 +11,7 @@ import './App.css';
 import Header from './Header';
 import Home from "./Home.js";
 import CollectionPage from "./CollectionPage.js"
-import WatchesPage from "./WatchesPage.js"
+import WatchPage from "./WatchPage"
 
 
 
@@ -38,6 +38,9 @@ import WatchesPage from "./WatchesPage.js"
     .then((r) => r.json())
     .then((data) => console.log(data));
     }
+
+
+    
 
 // Show featured company
 // Featured Company
@@ -71,7 +74,7 @@ import WatchesPage from "./WatchesPage.js"
         <Route exact path="/collections" element = {<CollectionPage/>}></Route>
 
         {/* <Route path="/companies/:id" element={</>}/> */}
-        <Route exact path="/watches" element = {<WatchesPage/>}></Route>
+        <Route exact path="/watches" element = {<WatchPage/>}></Route>
       </Routes>
     </BrowserRouter>
     </div>

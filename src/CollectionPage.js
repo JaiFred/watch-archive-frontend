@@ -5,8 +5,13 @@ import CollectionContainer from "./CollectionContainer.js"
 
 function CollectionPage(){
     const [collections, setCollections] = useState([])
+
+    // const { id, name, company_id } = collections
+
+    // console.log(name)
     
     // const { id, name, country, founded, image_url } = company
+
 
     // const location = useLocation()
 

@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { useState ,useEffect} from 'react'
 import CollectionPage from "./CollectionPage";
 
-function CompanyCard({company}){
+function CompanyCard({company, collections}){
 
     const { id, name, country, founded, image_url } = company
     // const { company_id } = collections
@@ -16,6 +16,8 @@ function CompanyCard({company}){
         console.log(company)
 
         console.log("image clicked")
+
+        console.log(collections.company_id)
     }
 
 // this filters the company's collections

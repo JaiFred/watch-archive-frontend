@@ -1,5 +1,4 @@
 import {useState, useEffect} from "react";
-import CompanyCard from "./CompanyCard.js"
 import CompanyContainer from "./CompanyContainer.js"
 // Company Container
 
@@ -19,6 +18,8 @@ function Home(){
         .then((r) => r.json())
         .then((data) => setCollections(data));
     }, [])
+
+    
 
     return( 
        <div>

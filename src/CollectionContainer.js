@@ -7,6 +7,8 @@ function CollectionContainer({collections}) {
         <CollectionCard key={collection.id} collection={collection}/>
     ))
 
+    console.log(collections.name)
+
     return( 
     <div>
         <h1>Collection</h1>
