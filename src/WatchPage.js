@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react"
 import WatchContainer from "./WatchContainer";
-import {Link, Routes, Route, useNavigate} from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 function WatchPage(){
     const navigate = useNavigate();
     const [watches, setWatches] = useState([])
@@ -14,6 +14,7 @@ function WatchPage(){
         
     }, [])
 
+    // Handle delete watch is a function defined on the highest level of the Watch hierarchy "WatchPage" so that it can be passed down as a prop to WatchCard and used to delete Watches from WatchCard State
     function handleDeleteWatch(deletedID) {
         // console.log(deletedID)
         const updatedWatchesArray = watches.filter(
@@ -23,9 +24,20 @@ function WatchPage(){
         setWatches(updatedWatchesArray);
     }
 
+    // const handleEditFood = (editedCard) => {
+    //     const updatedFoodsArray = foods.map((oldFoodCard) => {
+    //       if (oldFoodCard.id === editedCard.id){
+    //         return editedCard;
+    //       } else {
+    //         return oldFoodCard;
+    //       }
+    //     })
+    //     setFoods(updatedFoodsArray);
+    //   }
+
     return(
         <div>
-             <button onClick={() => navigate(-1)}>Go back 1 Page</button>
+             <button onClick={() => navigate(-1)}>Go back a page</button>
             <WatchContainer watches={watches} handleDeleteWatch={handleDeleteWatch}/>
         </div>
     )

@@ -13,7 +13,7 @@ import Home from "./Home.js";
 import CollectionPage from "./CollectionPage.js"
 import WatchPage from "./WatchPage.js"
 import SubmitWatch from './SubmitWatch';
-
+import EditModal from './EditModal';
 
 
 //
@@ -51,15 +51,16 @@ import SubmitWatch from './SubmitWatch';
       setWatches(updatedWatchesArray);
     }
 
-    // function handleDeleteWatch(deletedID) {
-    //   // console.log(deletedID)
-    //   const updatedWatchesArray = watches.filter(
-    //     (watch) => watch.id !== deletedID
-        
-    //   );
-    //   setFoods(updatedWatchesArray);
-    // }
-  
+    const handleEditWatch = (editedCard) => {
+      const updatedWatchArray = watches.map((oldWatchCard) => {
+        if (oldWatchCard.id === editedCard.id){
+          return editedCard;
+        } else {
+          return oldWatchCard;
+        }
+      })
+      setWatches(updatedWatchArray);
+    }
 
 
     
@@ -88,14 +89,9 @@ import SubmitWatch from './SubmitWatch';
     <BrowserRouter>
       <Header/>
       <Routes>
-        {/* Home => Company page */}
         <Route path="/" element = {[<SubmitWatch/>,<Home/>]}/>
-        {/* Home => Company page */}
-        {/* Collections page  */}
         <Route exact path="/collections" element = {<CollectionPage/>}></Route>
-
-        {/* <Route path="/companies/:id" element={</>}/> */}
-        <Route exact path="/watches" element = {<WatchPage/>}></Route>
+        <Route exact path="/watches" element = {[<SubmitWatch/>,<WatchPage/>]}/>
       </Routes>
     </BrowserRouter>
     </div>

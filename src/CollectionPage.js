@@ -32,7 +32,7 @@ function CollectionPage(){
 
     return(
         <div>
-            <button onClick={() => navigate(-1)}>Go back 1 Page</button>
+            <button onClick={() => navigate(-1)}>Go back a Page</button>
             <CollectionContainer collections={collections}/>
         </div>
     )

@@ -114,3 +114,7 @@
 .watchCard div {
   height:80px;
 }
+
+.modal{
+  background-color: grey;
+}

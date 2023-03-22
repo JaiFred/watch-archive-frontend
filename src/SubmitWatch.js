@@ -16,7 +16,6 @@ function SubmitWatch({ handleAddWatch }){
     const [ name, setName ] = useState("")
     const [ manufacturer, setManufacturer ] = useState("")
     const [ materials, setMaterials ] = useState("")
-    const [ year, setYear ] = useState("")
     const [ company_id, setCompany ] = useState("")
     const [ collection_id, setCollection ] = useState("")
 
@@ -32,13 +31,12 @@ function SubmitWatch({ handleAddWatch }){
             name: name,
             manufacturer: manufacturer,
             materials: materials,
-            year: year,
             company_id: company_id,
             collection_id: collection_id
           })
         })
         .then((res) => res.json())
-        .then((newWatch) => handleAddWatch(newWatch)); 
+        .then((newWatch) => handleAddWatch(newWatch));
     }
 
     console.log("hi")
@@ -46,19 +44,20 @@ function SubmitWatch({ handleAddWatch }){
     return (
         <form onSubmit={handleSubmit} method="post">
             <ul>
+                <p>Add A Watch to the Archive</p>
                 <div>
                     <label>
-                        <input type="text" 
-                            className="imageInput" 
-                            id="image" 
-                            placeholder='image' 
+                        <input type="text"
+                            className="image_input"
+                            id="image"
+                            placeholder='image'
                             onChange={(e) => setImage(e.target.value)}/>
                     </label>
                 </div>
                 <div>
                     <label>
                         <input
-                            className="nameInput"
+                            className="name_input"
                             id="name"
                             placeholder='name'
                             onChange={(e) => setName(e.target.value)}
@@ -67,18 +66,24 @@ function SubmitWatch({ handleAddWatch }){
                 </div>
                 <div>
                     <label>
-                        <input 
-                            className="manufacturer"
+                        <input
+                            className="manufacturer_input"
                             id="manufacturer"
-                            placeholder='manufacturer'
+                            placeholder="manufacturer"
                             onChange={(e) => setName(e.target.value)}
                         />
                     </label>
                 </div>
-                <di>
-                    
-                </di>
-
+                <div>
+                    <label>
+                        <input
+                            className="materials_input"
+                            id="materials"
+                            placeholder="materials"
+                            onChange={(e) => setName(e.target.value)}
+                        />
+                    </label>
+                </div>
                 <input id="submitBtn" type="submit"/>
             </ul>
         </form>
