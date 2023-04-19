@@ -26,7 +26,7 @@ function CompanyCard({company, collections}){
         <div className="companyCard">
             
             <button>
-                <Link company={company} to={{pathname:"/collections",state: {id: id}}}>
+                <Link company={company} to={{pathname:`/collections/${id}`, state: {id: id}}}>
                     <div>
                         <img src={image_url} alt="brand logo" onClick={handleClick}></img>
                     </div>

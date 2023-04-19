@@ -14,6 +14,7 @@ import CollectionPage from "./CollectionPage.js"
 import WatchPage from "./WatchPage.js"
 import SubmitWatch from './SubmitWatch';
 import EditModal from './EditModal';
+import CollectionPageDetails from './CollectionPageDetails';
 
 
 //
@@ -91,6 +92,7 @@ import EditModal from './EditModal';
       <Routes>
         <Route path="/" element = {[<SubmitWatch/>,<Home/>]}/>
         <Route exact path="/collections" element = {<CollectionPage/>}></Route>
+        <Route exact path="/collections/:id" element = {<CollectionPageDetails/>}></Route>
         <Route exact path="/watches" element = {[<SubmitWatch/>,<WatchPage/>]}/>
       </Routes>
     </BrowserRouter>
